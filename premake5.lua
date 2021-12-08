@@ -1,15 +1,5 @@
-framework "4.0"
-group "Dependencies/ATF"
-    -- SCE ATF Dependencies
-    require("../vendor/ATF/Framework/Atf.Core/premake5")
-    require("../vendor/ATF/Framework/Atf.Gui/premake5")
-    require("../vendor/ATF/Framework/Atf.Gui.WinForms/premake5")
-    require("../vendor/ATF/Framework/Atf.IronPython/premake5")
-    require("../vendor/ATF/Framework/Atf.SyntaxEditorControl/premake5")
-group ""
---------------------------------------------------------------------------------
 project "RazixCodeEditor"
-    kind "ConsoleApp"
+    kind "WindowedApp"
     language "C#"
     location"./"
 
