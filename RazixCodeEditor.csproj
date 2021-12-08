@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{D52B58A5-41B7-C569-4AC8-485EB6D2216A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Razix</RootNamespace>
+    <AssemblyName>RazixCodeEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug-windows-x86_64\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\bin-int\Debug-windows-x86_64\obj\Debug\RazixCodeEditor\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Release-windows-x86_64\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\bin-int\Release-windows-x86_64\obj\Release\RazixCodeEditor\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Distribution-windows-x86_64\</OutputPath>
+    <BaseIntermediateOutputPath>..\..\bin-int\Distribution-windows-x86_64\obj\Distribution\RazixCodeEditor\</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.XML.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeEditorSS.png" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Resources\About.rtf" />
+    <EmbeddedResource Include="Resources\Localization.xml" />
+    <EmbeddedResource Include="Resources\RazixAtf.ico" />
+    <EmbeddedResource Include="Resources\RazixAtf.png" />
+    <EmbeddedResource Include="Resources\RazixCodeEditorLogo.ico" />
+    <EmbeddedResource Include="Resources\ja\Localization.xml" />
+    <Compile Include="src\CodeDocument.cs" />
+    <Compile Include="src\Editor.cs" />
+    <Compile Include="src\HelpAboutCommand.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="src\RZCEResources.cs" />
+    <Compile Include="src\SourceControlContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\vendor\ATF\Framework\Atf.Core\Atf.Core.csproj">
+      <Project>{971A234B-83E7-7D56-AC00-6CFE982CB3E4}</Project>
+      <Name>Atf.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\ATF\Framework\Atf.Gui\Atf.Gui.csproj">
+      <Project>{B3AD2FA5-1F8D-AE40-28A5-3917940315A2}</Project>
+      <Name>Atf.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\ATF\Framework\Atf.Gui.WinForms\Atf.Gui.WinForms.csproj">
+      <Project>{D652ADB2-C24B-CC04-EB7D-B189D7D5AB10}</Project>
+      <Name>Atf.Gui.WinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\ATF\Framework\Atf.IronPython\Atf.IronPython.csproj">
+      <Project>{287A4FD4-1448-43DA-FDDB-B300E9481F3F}</Project>
+      <Name>Atf.IronPython</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\vendor\ATF\Framework\Atf.SyntaxEditorControl\Atf.SyntaxEditorControl.csproj">
+      <Project>{1DC0900F-89F7-D8A6-9201-3DCAFEB7FF9F}</Project>
+      <Name>Atf.SyntaxEditorControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
