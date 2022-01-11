@@ -19,7 +19,7 @@ namespace Razix
     /// It provides language syntax sensitive editing for plain text, C#, Lua, Squirrel,
     /// Python, XML, COLLADA and Cg files.
     /// For more information, see https://github.com/SonyWWS/ATF/wiki/ATF-Code-Editor-Sample. </summary>
-    class Program
+    class CodeEditor
     {
         /// <summary>
         /// The main entry point for the application</summary>
