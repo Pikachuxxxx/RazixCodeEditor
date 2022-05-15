@@ -12,6 +12,7 @@ namespace Razix
     /// <summary>
     /// Code editor component</summary>
     [Export(typeof(IInitializable))]
+    [Export(typeof(Editor))]
     [PartCreationPolicy(CreationPolicy.Shared)]
     public class Editor : IControlHostClient, IInitializable, ICommandClient
     {
@@ -78,7 +79,7 @@ namespace Razix
         [Export(typeof(IDocumentClient))]
         private DocumentClient m_daeDocumentClient;
 
-        [Export(typeof(IDocumentClient))]
+        //[Export(typeof(IDocumentClient))]
         private DocumentClient m_cgDocumentClient;
 
 

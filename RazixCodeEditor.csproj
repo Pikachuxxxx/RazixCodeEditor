@@ -20,7 +20,8 @@
     <OutputPath>..\..\bin\Debug-windows-x86_64\</OutputPath>
     <BaseIntermediateOutputPath>..\..\bin-int\Debug-windows-x86_64\obj\Debug\RazixCodeEditor\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -31,7 +32,8 @@
     <OutputPath>..\..\bin\Release-windows-x86_64\</OutputPath>
     <BaseIntermediateOutputPath>..\..\bin-int\Release-windows-x86_64\obj\Release\RazixCodeEditor\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -42,7 +44,8 @@
     <OutputPath>..\..\bin\Distribution-windows-x86_64\</OutputPath>
     <BaseIntermediateOutputPath>..\..\bin-int\Distribution-windows-x86_64\obj\Distribution\RazixCodeEditor\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -68,7 +71,7 @@
     <EmbeddedResource Include="Resources\RazixCodeEditorLogo.ico" />
     <EmbeddedResource Include="Resources\ja\Localization.xml" />
     <Compile Include="src\CodeDocument.cs" />
-    <Compile Include="src\CodeEditor.cs" />
+    <Compile Include="src\CodeEditorMain.cs" />
     <Compile Include="src\Editor.cs" />
     <Compile Include="src\HelpAboutCommand.cs" />
     <Compile Include="src\RZCEResources.cs" />

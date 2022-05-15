@@ -96,7 +96,14 @@ namespace Razix
             //  components, via the System.Lazy class. IInitializable allows components to defer some operations
             //  until all MEF composition has been completed.
             container.InitializeAll();
-            
+
+            if (args.Length > 0)
+            {
+                container.GetExportedValue<OutputService>().Write(OutputMessageType.Info, "Loading file from : " + args[0]);
+                string path = args[0];
+                path = path.Replace("\\", "/");
+                container.GetExportedValue<AutoDocumentService>().AutoDocuments = (path + ";");
+            }
             // Show the main form and start message handling. The main Form Load event provides a final chance
             //  for components to perform initialization and configuration.
             Application.Run(mainForm);
